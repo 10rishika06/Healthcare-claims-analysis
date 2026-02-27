@@ -1,5 +1,4 @@
 -- Function: Get High Claim Members
-
 CREATE OR REPLACE FUNCTION get_high_claim_members(p_limit NUMERIC)
 RETURNS TABLE(member_name VARCHAR, total_claim NUMERIC) AS
 $$
@@ -14,3 +13,6 @@ BEGIN
     HAVING SUM(c.claim_amount) > p_limit;
 END;
 $$ LANGUAGE plpgsql;
+
+--Call Statement
+SELECT * FROM get_high_claim_members(50000);
