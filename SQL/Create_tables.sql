@@ -1,4 +1,7 @@
---CREATE STATEMENT FOR MEMBERS TABLE
+-- Project: Healthcare Claims Analysis
+-- Step 1: Create Tables
+
+-- MEMBERS TABLE
 CREATE TABLE members(
 member_id SERIAL PRIMARY KEY,
 member_name VARCHAR(100) NOT NULL,
@@ -9,7 +12,7 @@ join_date DATE
 );
 
 
---CREATE STATEMENT FOR CLAIMS TABLE
+--CLAIMS TABLE
 CREATE TABLE claims(
 claim_id SERIAL PRIMARY KEY,
 member_id INT,
