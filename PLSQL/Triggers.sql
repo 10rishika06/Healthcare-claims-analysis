@@ -1,5 +1,4 @@
 -- Trigger Function: Validate Claim Amount
-
 CREATE OR REPLACE FUNCTION validate_claim_amount()
 RETURNS TRIGGER AS
 $$
